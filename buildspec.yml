@@ -24,6 +24,6 @@ phases:
   post_build:
     commands:
       - aws s3 sync --delete build/ s3://converterapp --acl public-read
- --acl public-read
+
 
 
