@@ -23,7 +23,7 @@ phases:
       - echo yarn build completed on `date`
   post_build:
     commands:
-      - aws s3 sync --delete build/ s3://converter-application --acl public-read
+      - aws s3 sync --delete build/ s3://converterapp --acl public-read
 
 
 
