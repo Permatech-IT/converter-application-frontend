@@ -1,0 +1,31 @@
+version: 0.2
+phases:
+  install:
+    # runtime-versions:
+    #   nodejs: 12
+    commands:
+      - echo installing yarn...
+      - npm install -g yarn
+      - yarn -v
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies via yarn...
+      - yarn
+      - echo NPM dependencies installed!
+      - echo linter--fix started!
+      - echo linter--fix completed!
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling code...
+      - echo yarn build started on `date`
+      - yarn build
+      - echo yarn build completed on `date`
+  post_build:
+    commands:
+      - aws s3 sync --delete build/ s3://converterapp --acl public-read
+
+
+ --acl public-read
+
+
