@@ -16,17 +16,17 @@ class Download extends React.Component {
     // }
     return (
       <div class="container">
-        <h1>Convert Files from ASCII to CSV</h1>
+        <h1>Converter: ASCII zu CSV</h1>
         <div class="frame3">
           <div class="center3">
             <img src={csv} />
             <p>Converted</p>
-            <a class="dwnld-btn" href="http://ec2-54-93-52-53.eu-central-1.compute.amazonaws.com:5000/download">
+            <a class="dwnld-btn" href="http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/download">
               {" "}
-              download
+              Download CSV
             </a>
             <a class="dwnld-btn" href="/">
-              Convert Again
+            Neue Conversion
             </a>
           </div>
         </div>
@@ -36,12 +36,14 @@ class Download extends React.Component {
           </div>
           <div class="listsec4">
             <ol>
-              <li>Upload your ASCII file to the online converter.</li>
-              <li> It will instantly start the extraction process.</li>
-              <li>
-                {" "}
-                Wait for the converter to finish and download your CSV file.
-              </li>
+            <li>ASCII-Datei auswählen und auf Upload klicken.
+
+</li>
+            <li>Conversion zu CSV per Klick starten.</li>
+            <li>
+              {" "}
+              Nach Ende des Conversion-Vorgangs steht die CSV-Datei zum Download bereit.
+            </li>
             </ol>
           </div>
         </div>

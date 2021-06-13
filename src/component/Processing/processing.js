@@ -11,7 +11,7 @@ class Process extends React.Component {
 
     return (
       <div class="container">
-        <h1>Convert Files from ASCII to CSV</h1>
+        <h1>Converter: ASCII zu CSV</h1>
         <div class="frame1">
           <div class="center1">
             <img src={convert} />
@@ -24,12 +24,14 @@ class Process extends React.Component {
           </div>
           <div class="listsec1">
             <ol>
-              <li>Upload your ASCII file to the online converter.</li>
-              <li> It will instantly start the extraction process.</li>
-              <li>
-                {" "}
-                Wait for the converter to finish and download your CSV file.
-              </li>
+            <li>ASCII-Datei auswählen und auf Upload klicken.
+
+</li>
+            <li>Conversion zu CSV per Klick starten.</li>
+            <li>
+              {" "}
+              Nach Ende des Conversion-Vorgangs steht die CSV-Datei zum Download bereit.
+            </li>
             </ol>
           </div>
         </div>

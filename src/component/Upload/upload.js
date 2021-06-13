@@ -21,12 +21,12 @@ function Fileupload() {
     formData.append("file", file);
     formData.append("fileName", fileName);
     try {
-      const res = await axios.post("http://ec2-54-93-52-53.eu-central-1.compute.amazonaws.com:5000/upload", formData);
+      const res = await axios.post("http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/upload", formData);
       alert("File Has been Uploaded");
       setShowText(true);
       console.log(res);
     } catch (ex) {
-      alert("Please select a valid ascii file !!");
+      alert("Bitte eine gültige ASCII-Datei auswählen!");
       console.log(ex);
     }
   };
@@ -43,7 +43,7 @@ function Fileupload() {
 
   return (
     <div class="container">
-      <h1>Convert Files from ASCII to CSV</h1>
+      <h1>Converter: ASCII zu CSV</h1>
       <div class="frame">
         <div class="brdr">
           <div class="icon1">
@@ -58,7 +58,7 @@ function Fileupload() {
                   onChange={saveFile}
                   accept=".asc"
                 />
-                Choose File
+                Datei auswählen
               </label>
             </div>
             <button className="upload-btn" onClick={uploadFile}>
@@ -71,7 +71,7 @@ function Fileupload() {
       {showText && (
         <div>
           <a class="convert-btn" href="/processing">
-            Convert To CSV
+          Convert zu CSV
           </a>
         </div>
       )}
@@ -81,11 +81,13 @@ function Fileupload() {
         </div>
         <div class="listsec">
           <ol>
-            <li>Upload your ASCII file to the online converter.</li>
-            <li> It will instantly start the extraction process.</li>
+            <li>ASCII-Datei auswählen und auf Upload klicken.
+
+</li>
+            <li>Conversion zu CSV per Klick starten.</li>
             <li>
               {" "}
-              Wait for the converter to finish and download your CSV file.
+              Nach Ende des Conversion-Vorgangs steht die CSV-Datei zum Download bereit.
             </li>
           </ol>
         </div>
