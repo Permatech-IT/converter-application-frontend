@@ -58,6 +58,7 @@ function Fileupload() {
                   onChange={saveFile}
                   accept=".asc"
                 />
+                Choose File
               </label>
             </div>
             <button className="upload-btn" onClick={uploadFile}>
