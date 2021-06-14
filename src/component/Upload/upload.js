@@ -21,7 +21,7 @@ function Fileupload() {
     formData.append("file", file);
     formData.append("fileName", fileName);
     try {
-      const res = await axios.post("http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/upload", formData);
+      const res = await axios.post("http://ec2-3-123-189-165.eu-central-1.compute.amazonaws.com:5000/upload", formData);
       alert("File Has been Uploaded");
       setShowText(true);
       console.log(res);

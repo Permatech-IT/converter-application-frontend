@@ -21,7 +21,7 @@ class Download extends React.Component {
           <div class="center3">
             <img src={csv} />
             <p>Converted</p>
-            <a class="dwnld-btn" href="http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/download">
+            <a class="dwnld-btn" href="http://ec2-3-123-189-165.eu-central-1.compute.amazonaws.com:5000/download">
               {" "}
               Download CSV
             </a>
