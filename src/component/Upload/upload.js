@@ -13,16 +13,16 @@ function Fileupload() {
   const [showText, setShowText] = useState(false);
   const saveFile = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-    setFile(e.target.files[0]);
-    setFileName(e.target.files[0].name);
-  }
+      setFile(e.target.files[0]);
+      setFileName(e.target.files[0].name);
+    }
   };
   const uploadFile = async (e) => {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("fileName", fileName);
     try {
-      const res = await axios.post("http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/upload", formData);
+      const res = await axios.post("http://http://converterapp.s3-website.eu-central-1.amazonaws.com:5000/upload", formData);
       alert("File Has been Uploaded");
       setShowText(true);
       console.log(res);
@@ -59,7 +59,6 @@ function Fileupload() {
                   onChange={saveFile}
                   accept=".asc"
                 />
-               
               </label>
             </div>
             <button className="upload-btn" onClick={uploadFile}>
@@ -72,7 +71,7 @@ function Fileupload() {
       {showText && (
         <div>
           <a class="convert-btn" href="/processing">
-          Convert zu CSV
+            Convert zu CSV
           </a>
         </div>
       )}
@@ -82,13 +81,12 @@ function Fileupload() {
         </div>
         <div class="listsec">
           <ol>
-            <li>ASCII-Datei auswählen und auf Upload klicken.
-
-</li>
+            <li>ASCII-Datei auswählen und auf Upload klicken.</li>
             <li>Conversion zu CSV per Klick starten.</li>
             <li>
               {" "}
-              Nach Ende des Conversion-Vorgangs steht die CSV-Datei zum Download bereit.
+              Nach Ende des Conversion-Vorgangs steht die CSV-Datei zum Download
+              bereit.
             </li>
           </ol>
         </div>
