@@ -12,9 +12,10 @@ function Fileupload() {
   const [fileName, setFileName] = useState("");
   const [showText, setShowText] = useState(false);
   const saveFile = (e) => {
+    if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0]);
       setFileName(e.target.files[0].name);
-    
+    }
   };
   const uploadFile = async (e) => {
     const formData = new FormData();
@@ -58,7 +59,7 @@ function Fileupload() {
                   onChange={saveFile}
                   accept=".asc"
                 />
-                Choose File
+//                 Choose File
               </label>
             </div>
             <button className="upload-btn" onClick={uploadFile}>
