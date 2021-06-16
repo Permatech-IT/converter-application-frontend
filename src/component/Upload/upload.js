@@ -23,7 +23,7 @@ function Fileupload() {
     formData.append("fileName", fileName);
     try {
       const res = await axios.post("http://ec2-3-123-189-165.eu-central-1.compute.amazonaws.com:5000/upload", formData);
-      alert("File Has been Uploaded");
+      alert("Die Datei wurde erfolgreich hochgeladen.");
       setShowText(true);
       console.log(res);
     } catch (ex) {
