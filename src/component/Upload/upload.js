@@ -53,12 +53,22 @@ function Fileupload() {
           <div class="center">
             <div class="dropzone">
               <label>
+                 <label htmlFor="filePicker" style={{ background:"#F5F5F5", padding:"5px 10px" }}>
+              Datei auswählen
+             </label>
                 <input
                   type="file"
                   className="upload-input one"
                   onChange={saveFile}
                   accept=".asc"
+                  id="filePicker" 
+                  style={{visibility:"hidden"}}
+
                 />
+<p><b>
+  {fileName}
+  </b>
+</p>
 
               </label>
             </div>
